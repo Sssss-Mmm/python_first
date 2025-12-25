@@ -1,3 +1,7 @@
+"""
+[20250414_01.py]
+Python 예외 처리(try-except-else-finally), 사용자 입력 예외 처리 및 사용자 정의 예외 클래스 예제입니다.
+"""
 import sys
 print(dir(sys))
 

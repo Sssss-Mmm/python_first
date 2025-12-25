@@ -1,4 +1,8 @@
- # -*- coding: <UTF-8> -*- 
+"""
+[hello.py]
+기본적인 Python 문자열 조작, 연산, 출력 및 제어문(if, for) 실습 예제입니다.
+"""
+# -*- coding: <UTF-8> -*- 
 print("hello")
 a = [1, '1', "1"] # 문자열 배열
 a = str(a[0]) + a[1] + a[2] # 문자열 - concatenation

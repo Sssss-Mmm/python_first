@@ -1,3 +1,11 @@
+"""
+[20250411_01.py]
+튜플(Tuple), 집합(Set), 딕셔너리(Dictionary) 자료구조 실습 및 외부 모듈(fibonacciModule) 사용 예제입니다.
+"""
+#del
+#리스트 : 요소의 내용 변경 가능
+#Mutable : list, dict, set, byte array
+#Immutable : tuple, string, integer 등
 a=[-1,1,66,25,333,333,1234.5]
 del a[0]
 print('a=',a)

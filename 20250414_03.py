@@ -1,4 +1,8 @@
 
+"""
+[20250414_03.py]
+Numpy 배열 생성, 초기화 함수(zeros, ones, full 등) 및 배열 속성 확인 예제입니다.
+"""
 import numpy as np
 import time
 print(np.__version__)

@@ -1,8 +1,12 @@
+"""
+[20250417_02.py]
+Fremont Bridge 자전거 통행량 데이터를 이용한 시계열 데이터 시각화 및 분석 예제입니다.
+"""
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn
-data = pd.read_csv("C:/Users/hi/Desktop/job/python/python_first/FremontBridge.csv",index_col="Date",parse_dates=True)
+data = pd.read_csv("FremontBridge.csv",index_col="Date",parse_dates=True)
 print(data.head(5))
 cols =['East',"West"]
 data.columns = cols
@@ -40,6 +44,6 @@ byTime.loc['Weekday'].plot(ax=ax[0],title='Weekdays',
 byTime.loc['Weekend'].plot(ax=ax[1],title='Weekends',
                            xticks=hourlyTicks, 
                            style=[':','--','-'])
-plt.show()
+# plt.show()
 
 

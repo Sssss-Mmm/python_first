@@ -1,3 +1,7 @@
+"""
+[20250415_01.py]
+Numpy 배열 슬라이싱, 팬시 인덱싱, 브로드캐스팅, 배열 변환(Shape manipulation) 예제입니다.
+"""
 import numpy as np
 print(np.__version__)
 

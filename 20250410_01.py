@@ -1,3 +1,7 @@
+"""
+[20250410_01.py]
+함수 인자(위치/키워드 전용), 람다(lambda) 함수, 리스트/스택/큐 구현, 리스트 컴프리헨션(List Comprehension) 및 행렬 전치 예제입니다.
+"""
 def standard_arg(arg):
     print(arg)
 

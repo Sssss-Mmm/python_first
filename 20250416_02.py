@@ -1,3 +1,7 @@
+"""
+[20250416_02.py]
+Pandas 라이브러리의 핵심 자료구조인 Series와 DataFrame의 생성 및 기초 사용법 예제입니다.
+"""
 import pandas as pd
 print(pd.__version__)
 data = [1,2,3,4]

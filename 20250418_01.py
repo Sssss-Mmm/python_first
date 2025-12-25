@@ -1,12 +1,17 @@
+"""
+[20250418_01.py]
+Fremont Bridge 자전거 통행량 데이터를 날씨 데이터와 결합하여 선형 회귀 모델로 트래픽을 예측하고 평가하는 예제입니다.
+"""
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn
 import datetime
 from pandas.tseries.holiday import USFederalHolidayCalendar
+from sklearn.metrics import r2_score, mean_squared_error
 
-counts= pd.read_csv('python_first/FremontBridge.csv',index_col='Date', parse_dates=True)
-weather =pd.read_csv('python_first/BicycleWeather.csv',index_col='DATE',parse_dates=True)
+counts= pd.read_csv('FremontBridge.csv',index_col='Date', parse_dates=True)
+weather =pd.read_csv('BicycleWeather.csv',index_col='DATE',parse_dates=True)
 print(counts.head(3))
 weather.info()
 print(weather.head(3))
@@ -59,8 +64,44 @@ daily['predicted'] = model.predict(X) # 검증, 모의고사, 테스트...(맞�
 daily[['Total','predicted']].plot(alpha=0.5)
 params= pd.Series(model.coef_,index=X.columns)
 print("params:",params)
-plt.show() 
+# plt.show() 
 from sklearn.utils import resample
 np.random.seed(1)
 err = np.std([model.fit(*resample(X,y)).coef_ for i in range(1000)],0)
 print(pd.DataFrame({'effect': params.round(0), 'error':err.round(0)}))
+
+# --- Added Features ---
+
+# 1. Model Evaluation
+r2 = r2_score(y, daily['predicted'])
+rmse = np.sqrt(mean_squared_error(y, daily['predicted']))
+print(f"\n[Model Evaluation]")
+print(f"R2 Score: {r2:.4f}")
+print(f"RMSE: {rmse:.4f}")
+
+# 2. Save Results
+output_filename = 'predicted_bicycle_traffic.csv'
+daily.to_csv(output_filename)
+print(f"\n[Result Saving]")
+print(f"Results saved to '{output_filename}'")
+
+# 3. Visualization
+plt.figure(figsize=(14, 6))
+
+# Subplot 1: Actual vs Predicted Scatter
+plt.subplot(1, 2, 1)
+plt.scatter(y, daily['predicted'], alpha=0.3)
+plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--', lw=2)
+plt.xlabel('Actual Traffic')
+plt.ylabel('Predicted Traffic')
+plt.title('Actual vs Predicted (Scatter)')
+
+# Subplot 2: Detailed View of First 50 Days
+plt.subplot(1, 2, 2)
+daily['Total'].iloc[:50].plot(label='Actual', style='-')
+daily['predicted'].iloc[:50].plot(label='Predicted', style='--')
+plt.legend()
+plt.title('Actual vs Predicted (First 50 Days)')
+
+plt.tight_layout()
+plt.show()

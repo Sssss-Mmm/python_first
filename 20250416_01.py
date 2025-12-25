@@ -1,3 +1,7 @@
+"""
+[20250416_01.py]
+Numpy 다차원 배열 접근 및 Matplotlib을 이용한 다양한 그래프(Line, Bar, Scatter, Box, Pie, Histogram) 시각화 예제입니다.
+"""
 import numpy as np
 x= np.arange(2*3*4)
 print("x = np.arange(2*3*4):\n",x);print()

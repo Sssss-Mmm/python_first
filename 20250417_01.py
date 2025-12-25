@@ -1,3 +1,7 @@
+"""
+[20250417_01.py]
+Pandas를 이용한 데이터 로드, 결측치 처리, 그룹화(groupby), 그리고 Titanic 데이터셋을 이용한 전처리 및 분석 예제입니다.
+"""
 import pandas as pd
 import numpy as np
 for dformat in dir(pd):
@@ -21,8 +25,8 @@ columns1 = ["예산","기념일"]
 dataFrame2 = pd.DataFrame(data=data2,index=index, columns=columns)
 dataFrame3 = pd.DataFrame(data=data3, columns=columns1)
 print(dataFrame2)
-df = pd.read_csv("C:/Users/hi/Desktop/job/python/python_first/BicycleWeather.csv")
-df2 = pd.read_csv("C:/Users/hi/Desktop/job/python/python_first/FremontBridge2.csv")
+df = pd.read_csv("BicycleWeather.csv")
+df2 = pd.read_csv("FremontBridge2.csv")
 print(df.head(2))
 print(df.tail(3))
 print(df.sample(5))
@@ -39,7 +43,7 @@ print(isnaDataFrame2.groupby("기념일").mean())
 print(dataFrame3.groupby("예산").mean())
 
 print("--------------train.csv---------------")
-df = pd.read_csv("C:/Users/hi/Desktop/job/python/python_first/train.csv")
+df = pd.read_csv("train.csv")
 print(df.sample(5))
 df.info()
 print(df.isna())
@@ -96,7 +100,7 @@ def f2(x,n):
 print(df[["Age","SibSp","Fare"]])
 print(df[["Age","SibSp","Fare"]].apply(f2,args=[2]))
 df.to_csv("titanic.csv")
-df.to_clipboard("123")
+# df.to_clipboard("123")
 for dformat in dir(df):
     if dformat.startswith("to_"):
         print(dformat)

@@ -90,12 +90,18 @@ print(age_mean)
 sampleDf2["나이"]=sampleDf2["나이"].fillna(value=age_mean)
 print(sampleDf2[888:])
 def f(x):
+    """
+    입력된 값의 문자열 길이를 반환합니다.
+    """
     return len(str(x))
 print(f(sampleDf2))
 print("-----------------map() test ------------")
 print(df.Sex.map(lambda x:0 if x =="female" else 1))
 print(df.Sex.map({"female":10,"male":20}))
 def f2(x,n):
+    """
+    x의 n승을 계산하여 반환합니다.
+    """
     return x **n
 print(df[["Age","SibSp","Fare"]])
 print(df[["Age","SibSp","Fare"]].apply(f2,args=[2]))

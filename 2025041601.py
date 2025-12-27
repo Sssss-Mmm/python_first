@@ -1,0 +1,9 @@
+import numpy as np
+x = np.arrange(2*3*4)
+print(x)
+x = x.reshape(2,3,4)
+print(x)
+print("윗면 : ", x[0, :, :]) # ...
+print("앞면 : ", x[:, 0, :]) # ...
+print("옆면 : ", x[:, :, 0]) # ...
+print("1차원으로 : ", x.ravel())

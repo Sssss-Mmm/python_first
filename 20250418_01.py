@@ -34,11 +34,21 @@ daily['holiday'].fillna(0, inplace=True)
 print(daily.head(3))
 # 일조시간에 자전거를 타는 사람
 def hours_of_daylight(date, axis=23.44, latitude=47.61):
- # 해당 날짜의 일조시간 계산
- days = (date - pd.to_datetime('2000, 12, 21')).days
- m = (1. -np.tan(np.radians(latitude))
- * np.tan(np.radians(axis) * np.cos(days * 2 * np.pi / 365.25)))
- return 24 * np.degrees(np.arccos(1 - np.clip(m, 0, 2))) / 180.
+    """
+    해당 날짜의 일조시간(낮의 길이)을 계산합니다.
+    
+    Args:
+        date: 날짜
+        axis: 자전축 기울기 (기본값: 23.44도)
+        latitude: 위도 (기본값: 47.61도 - 시애틀)
+    Returns:
+        일조시간 (시간 단위)
+    """
+    # 해당 날짜의 일조시간 계산
+    days = (date - pd.to_datetime('2000, 12, 21')).days
+    m = (1. -np.tan(np.radians(latitude))
+    * np.tan(np.radians(axis) * np.cos(days * 2 * np.pi / 365.25)))
+    return 24 * np.degrees(np.arccos(1 - np.clip(m, 0, 2))) / 180.
 daily['daylight_hrs'] = list(map(hours_of_daylight, daily.index))
 daily[['daylight_hrs']].plot()
 plt.ylim(8, 17)

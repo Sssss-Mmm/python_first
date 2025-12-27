@@ -1,8 +1,4 @@
-"""
-[hello.py]
-기본적인 Python 문자열 조작, 연산, 출력 및 제어문(if, for) 실습 예제입니다.
-"""
-# -*- coding: <UTF-8> -*- 
+ # -*- coding: <UTF-8> -*- 
 print("hello")
 a = [1, '1', "1"] # 문자열 배열
 a = str(a[0]) + a[1] + a[2] # 문자열 - concatenation
@@ -37,25 +33,21 @@ print(word[:2]+word[2:])
 print(word[4:42])
 print(word[42:]) 
 # 존재하지 않는 index ~ 끝까지
-# temp = int(input("숫자를 입력하세요:"))
-# if temp<0 :
-#     print("음수를 입력하세셨습니다.")
-# elif temp>0:
-#     print("양수를 입력 하셨습니다.")
-# else :
-#     print("Zero 를 입력 하셨습니다.")
-words = ['cat','window','defenestrate']
-for w in words:
-    print(w,len(w))
-#Strategy: Iterate over a copy
-# for user,status in users.copy().items():
-#     if status == 'inactive':
-#         del users[user]
-for i in range(5):
-    print(i)
-a=['Mary','had','a','little','lamb']
-for i in range(len(a)):
-    print(i,a[i])
-#range는 허수의 개념
-temp = range(5)
-print(list(range(4)))
+# str은 불변
+# word[0] = 'J'
+# word = 'Jython'
+word = 'J'+word[1:]
+length = len(word)
+print(word)
+print(length)
+
+# temp = input("입력하세요:")
+
+temp = int(input("숫자를 입력하세요:"))
+if temp<0 :
+    print("음수를 입력 하셨습니다.")
+    print('')
+elif temp>0 : 
+    print("양수를 입력 하셨습니다.")
+else :
+    print("Zero 를 입력 하셨습니다.")

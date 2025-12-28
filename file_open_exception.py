@@ -29,13 +29,13 @@ for arg in sys.argv[1:]:
         f.close()
 
 try:
-    raise Exception('spam','eggs') # anonymous class -> create object
+    raise Exception('spam','eggs') # 익명 클래스 -> 객체 생성
 except Exception as inst:
-    print(type(inst))    # the exception instance
-    print(inst.args)     # arguments stored in .args
-    print(inst)          # __str__ allows args to be printed directly,                         
-                         # but may be overridden in exception subclasses
-    x,y =inst.args       # unpack args
+    print(type(inst))    # 예외 인스턴스
+    print(inst.args)     # .args에 저장된 인자들
+    print(inst)          # __str__ 메서드를 통해 인자를 직접 출력할 수 있음,                         
+                         # 하지만 예외 하위 클래스에서 오버라이딩 될 수 있음
+    x,y =inst.args       # 인자 언패킹
     print('x =',x)
     print('y =',y)
     

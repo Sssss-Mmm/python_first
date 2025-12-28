@@ -1,6 +1,6 @@
 # fibonacciModule.py
 def fibonacci(n):   
-    # return Fibonacci series up to n
+    # n까지의 피보나치 수열 반환
     result = []
     a,b = 0,1
     while a<n:

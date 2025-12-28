@@ -1,5 +1,5 @@
-# Fibonacci numbers module
-def fib(n):    # write Fibonacci series up to n
+# 피보나치 수열 모듈
+def fib(n):    # n까지의 피보나치 수열 출력
     a,b = 0,1
     while a<n:
         print(a,end=' ')
@@ -8,7 +8,7 @@ def fib(n):    # write Fibonacci series up to n
 
 fib(1000)
 
-def fib2(n):   # return Fibonacci series up to n
+def fib2(n):   # n까지의 피보나치 수열 반환
     result = []
     a,b = 0,1
     while a<n:

@@ -4,7 +4,7 @@ for n in range(2,10):
              print(n,'equals',x,'*',n//x)
              break
      else:
-         # loop fell through without finding a factor
+         # 인수를 찾지 못하고 루프가 종료됨 (소수임)
          print(n,'is a prime number')
 
 for num in range(2,10):
@@ -14,7 +14,7 @@ for num in range(2,10):
      print("Found a number",num)
 
 def  fib2(n):
-    """Print a Fibonacci series up to n."""
+    """n까지의 피보나치 수열을 출력합니다."""
     a,b =0,1
     result = []
     while a<n:

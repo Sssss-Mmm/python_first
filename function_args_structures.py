@@ -103,8 +103,8 @@ from collections import deque
 queue = deque(["Eric","John","Michael"])
 queue.append("Terry")
 queue.append("Graham")
-print(queue.popleft()) #Eric left
-print(queue.popleft()) #John left
+print(queue.popleft()) #Eric 나감
+print(queue.popleft()) #John 나감
 print(queue)
 squares= []
 for x in range(10):

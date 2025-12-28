@@ -27,19 +27,19 @@ data.info()
 
 # 3. [일간 데이터 리샘플링 및 이동 평균 시각화]
 daily = data.resample('D').sum()
-# daily.rolling(30,center=True).sum().plot(style=[':','--','-'])
-# plt.ylabel('mean hourly count')
-# daily.rolling(50, center=True,win_type='gaussian').sum(std=10).plot(style=[':','--','-'])
+daily.rolling(30,center=True).sum().plot(style=[':','--','-'])
+plt.ylabel('mean hourly count')
+daily.rolling(50, center=True,win_type='gaussian').sum(std=10).plot(style=[':','--','-'])
 
 # 4. [시간대별 평균 통행량 분석]
 byTime = data.groupby(data.index.time).mean()
 hourlyTicks= 4*60*60*np.arange(6)
-# byTime.plot(xticks=hourlyTicks,style=[':','--','-'])
+byTime.plot(xticks=hourlyTicks,style=[':','--','-'])
 
 # 5. [요일별 평균 통행량 분석]
 byWeekday = data.groupby(data.index.dayofweek).mean()
-# byWeekday.index=['Mon',"Tues","Wed","Thurs","Fri","Sat","Sun"]
-# byWeekday.plot(style=[':','--','-'])
+byWeekday.index=['Mon',"Tues","Wed","Thurs","Fri","Sat","Sun"]
+byWeekday.plot(style=[':','--','-'])
 
 
 # 6. [주중 vs 주말 시간대별 통행량 비교]
@@ -52,6 +52,6 @@ byTime.loc['Weekday'].plot(ax=ax[0],title='Weekdays',
 byTime.loc['Weekend'].plot(ax=ax[1],title='Weekends',
                            xticks=hourlyTicks, 
                            style=[':','--','-'])
-# plt.show()
+plt.show()
 
 

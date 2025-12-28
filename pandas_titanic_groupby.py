@@ -82,8 +82,8 @@ sampleDf.drop(columns=["Family"], inplace=True)
 print(sampleDf)
 np.random.seed(0)
 size = len(sampleDf)
-print(size) # count of rows
-data = np.random.rand(size) # psudo data created.
+print(size) # 행의 개수
+data = np.random.rand(size) # 가상 데이터 생성
 print(data)
 standard = pd.Series(data, name="standard")
 print(standard)

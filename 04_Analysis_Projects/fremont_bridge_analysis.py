@@ -11,7 +11,7 @@ data = pd.read_csv("../data/FremontBridge.csv",index_col="Date",parse_dates=True
 print(data.head(5))
 cols =['East',"West"]
 data.columns = cols
-data['Total']=data.eval('East+West')# data['Total']= data['East']+data['West']
+data['Total']=data.eval('East+West')# 전체 통행량 계산 (동쪽 + 서쪽)
 print(data.head(5))
 print(data.describe())
 data.info()
@@ -21,15 +21,15 @@ data.info()
 # plt.show()
 
 # 2. [주간 데이터 리샘플링]
-# weekly = data.resample('W').sum()
+# weekly = data.resample('W').sum() # 주간 단위 합계
 # weekly.plot(style=[':','--','-']) 
 # plt.ylabel('Weekly bicycle count')
 
 # 3. [일간 데이터 리샘플링 및 이동 평균 시각화]
-daily = data.resample('D').sum()
-daily.rolling(30,center=True).sum().plot(style=[':','--','-'])
+daily = data.resample('D').sum() # 일간 단위 합계
+daily.rolling(30,center=True).sum().plot(style=[':','--','-']) # 30일 이동 평균
 plt.ylabel('mean hourly count')
-daily.rolling(50, center=True,win_type='gaussian').sum(std=10).plot(style=[':','--','-'])
+daily.rolling(50, center=True,win_type='gaussian').sum(std=10).plot(style=[':','--','-']) # 가우시안 윈도우 스무딩
 
 # 4. [시간대별 평균 통행량 분석]
 byTime = data.groupby(data.index.time).mean()

@@ -15,14 +15,14 @@ daily = daily[["Total"]]
 print(daily)
 days = ['Mon','Tues','Wed','Thurs','Fri','Sat','Sun']
 for i in range(7):
-    daily[days[i]] = (daily.index.dayofweek == i).astype(float)
+    daily[days[i]] = (daily.index.dayofweek == i).astype(float) # 요일별 원-핫 인코딩
 print(daily)
 from pandas.tseries.holiday import USFederalHolidayCalendar
 cal = USFederalHolidayCalendar()
 holidays = cal.holidays("2012", "2016")
-daily = daily.join(pd.Series(1, index=holidays, name="holiday"))
+daily = daily.join(pd.Series(1, index=holidays, name="holiday")) # 휴일 데이터 조인
 # print(daily.index[]) # 2012년의 휴일인 날짜 샘플 출력(스스로)
-daily["holiday"].fillna(0, inplace=True) # 혹시 모르는 None 데이터를 0으로 채움
+daily["holiday"].fillna(0, inplace=True) # 휴일이 아닌 날은 0으로 채움 (결측치 처리)
 print(daily)
 
 def hoursOfDayLight(date, axis=23.44, latitude=47.61):
@@ -31,7 +31,7 @@ def hoursOfDayLight(date, axis=23.44, latitude=47.61):
     m = (1-np.tan(np.radians(latitude)) \
          * np.tan(np.radians(axis) * np.cos(days * 2 *np.pi /365.25)))
     return 24 * np.degrees(np.arccos(1- np.clip(m, 0, 2))) / 180.
-daily["daylight_hrs"] = list(map(hoursOfDayLight, daily.index))
+daily["daylight_hrs"] = list(map(hoursOfDayLight, daily.index)) # 일조시간 특징 추가
 # daily[["daylight_hrs"]].plot()
 # plt.ylim(8, 17)
 # plt.show()
@@ -39,10 +39,10 @@ weather["TMIN"] /= 10
 weather["TMAX"] /= 10
 weather["Temp (F)"] = 0.5 * (weather["TMIN"] + weather["TMAX"])
 weather["PRCP"] /= 254 # weather["PRCP"] = weather["PRCP"] / 254
-weather["dry day"] = (weather["PRCP"] == 0).astype(int)
+weather["dry day"] = (weather["PRCP"] == 0).astype(int) # 건조한 날 여부
 daily = daily.join(weather[["PRCP", "Temp (F)", "dry day"]])
 print(daily.head(10))
-daily["annual"] = (daily.index - daily.index[0]).days / 365.
+daily["annual"] = (daily.index - daily.index[0]).days / 365. # 연도 경과 (트렌드 반영)
 print(daily.sample())
 daily.dropna(axis=0, how='any', inplace=True)
 column_names = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun', 

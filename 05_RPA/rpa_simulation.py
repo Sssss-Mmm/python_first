@@ -18,11 +18,12 @@ def create_dummy_daily_report(filename):
         writer.writerow(["날짜", "부서", "매출액", "담당자"]) # 헤더
         
         for _ in range(20): # 20건의 데이터 생성
-            date = datetime.now().strftime("%Y-%m-%d")
-            dept = random.choice(departments)
-            amount = random.randint(100, 1000) * 10000 # 100만 ~ 1000만
-            manager = f"담당자_{random.randint(1, 10)}"
-            writer.writerow([date, dept, amount, manager])
+            # 임의의 데이터 생성
+            date = datetime.now().strftime("%Y-%m-%d") # 오늘 날짜
+            dept = random.choice(departments) # 부서 랜덤 선택
+            amount = random.randint(100, 1000) * 10000 # 100만 ~ 1000만 사이의 매출액
+            manager = f"담당자_{random.randint(1, 10)}" # 담당자 1~10 랜덤
+            writer.writerow([date, dept, amount, manager]) # 한 행 쓰기
     print(f"[Step 1] '{filename}' 파일 다운로드 완료 (가상)")
 
 # 2. [데이터 읽기 및 가공] (RPA의 'Read Excel', 'Loop', 'Calculate' 단계)
@@ -37,10 +38,11 @@ def process_report(input_file, output_file):
             dept = row["부서"]
             amount = int(row["매출액"])
             
+            # 부서별 매출액 집계
             if dept in summary:
-                summary[dept] += amount
+                summary[dept] += amount # 기존에 있으면 더하기
             else:
-                summary[dept] = amount
+                summary[dept] = amount # 없으면 초기화
     
     # 3. [결과 저장] (RPA의 'Write Excel', 'Send Email' 단계)
     print(f"[Step 3] 집계 결과 '{output_file}' 생성 중...")

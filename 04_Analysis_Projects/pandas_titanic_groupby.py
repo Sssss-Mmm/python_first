@@ -25,8 +25,8 @@ data1 = [
 index = pd.date_range("20250503", periods=7)
 columns = ["일자", "예산", "기념일"]
 columns1 = ["예산", "기념일"]
-dataFrame2 = pd.DataFrame(data=data, index=index, columns=columns)
-dataFrame3 = pd.DataFrame(data=data1, columns=columns1)
+dataFrame2 = pd.DataFrame(data=data, index=index, columns=columns) # 기념일 데이터 프레임 생성
+dataFrame3 = pd.DataFrame(data=data1, columns=columns1) # 예산 데이터 프레임 생성
 print(dataFrame2)
 
 for dformat in dir(pd):
@@ -46,9 +46,9 @@ print(df.describe())
 df2 = pd.read_csv("../data/FremontBridge.csv")
 print(df2.corr())
 
-isnaDataFrame2 = dataFrame2.isna()
-print(isnaDataFrame2.groupby("기념일").mean())
-print(dataFrame3.groupby("예산").mean())
+isnaDataFrame2 = dataFrame2.isna() # 결측치 확인
+print(isnaDataFrame2.groupby("기념일").mean()) # 기념일 기준으로 결측치 비율 확인
+print(dataFrame3.groupby("예산").mean()) # 예산 기준으로 그룹화하여 평균 확인
 
 ################  train.csv  ####################
 
@@ -64,17 +64,17 @@ print(df.Survived)
 print(df.head(1)) # index==0인 값
 print(df.loc[0, "Name"])
 print(df.iloc[0, 3])
-sampleDf = df.iloc[0:5, 1:3]
-sampleDf = df[["Survived", "Pclass", "Age", "SibSp", "Parch", "Fare"]]
+sampleDf = df.iloc[0:5, 1:3] # iloc 인덱싱 예제
+sampleDf = df[["Survived", "Pclass", "Age", "SibSp", "Parch", "Fare"]] # 분석할 컬럼들만 선택
 print(sampleDf)
 print(sampleDf.corr())
 print(sampleDf.groupby("Survived").mean())
 mask = (df.Sex == "female")
 print(mask)
 print([[mask]])
-sampleDf["New"] = 0
+sampleDf["New"] = 0 # 임시 컬럼 추가
 sampleDf["Family"] \
-    = sampleDf["SibSp"] + sampleDf["Parch"]
+    = sampleDf["SibSp"] + sampleDf["Parch"] # 가족 수 계산 (형제 + 부모/자녀)
 print(sampleDf)
 sampleDf = sampleDf.drop(labels="New", axis=1)
 print(sampleDf)
@@ -98,9 +98,9 @@ print(rdf)
 rdf = rdf.reset_index(drop=True)
 print(rdf)
 df.rename({"Age" : "나이"}, axis=1)
-age_mean = sampleDf.Age.mean()
+age_mean = sampleDf.Age.mean() # 나이 평균
 print(age_mean)
-sampleDf["Age"] = sampleDf["Age"].fillna(value=age_mean)
+sampleDf["Age"] = sampleDf["Age"].fillna(value=age_mean) # 나이 결측치를 평균으로 대체
 print(sampleDf[888:])
 def f(x) : 
     return len(str(x))

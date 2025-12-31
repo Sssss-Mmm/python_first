@@ -25,9 +25,9 @@ columns1 = ["예산","기념일"]
 dataFrame2 = pd.DataFrame(data=data2,index=index, columns=columns)
 dataFrame3 = pd.DataFrame(data=data3, columns=columns1)
 print(dataFrame2)
-df = pd.read_csv("../data/BicycleWeather.csv")
-df2 = pd.read_csv("../data/FremontBridge2.csv")
-print(df.head(2))
+df = pd.read_csv("../data/BicycleWeather.csv") # 날씨 데이터 로드
+df2 = pd.read_csv("../data/FremontBridge2.csv") # 프리몬트 교량 데이터 로드
+print(df.head(2)) # 상위 2개 행 출력
 print(df.tail(3))
 print(df.sample(5))
 print(df.info()) # 함수의 리턴이 뭔지 확인하기
@@ -38,9 +38,9 @@ print(df.describe())
 print(df2.corr())
 print(df2.mean())
 
-isnaDataFrame2= dataFrame2.isna()
-print(isnaDataFrame2.groupby("기념일").mean())
-print(dataFrame3.groupby("예산").mean())
+isnaDataFrame2= dataFrame2.isna() # 결측치 여부 확인 (True/False)
+print(isnaDataFrame2.groupby("기념일").mean()) # 기념일별 결측치 비율
+print(dataFrame3.groupby("예산").mean()) # 예산별 평균
 
 print("--------------train.csv---------------")
 df = pd.read_csv("../data/train.csv")
@@ -53,8 +53,8 @@ print(df.Survived)
 print(df.head(1))
 print(df.loc[0,"Name"])
 print(df.iloc[0,3])
-sampleDf= df.iloc[0:5,1:3]
-sampleDf2=df[["Survived","Pclass","Age","SibSp","Parch","Fare"]]
+sampleDf= df.iloc[0:5,1:3] # iloc을 이용한 인덱싱 (행: 0~4, 열: 1~2)
+sampleDf2=df[["Survived","Pclass","Age","SibSp","Parch","Fare"]] # 주요 컬럼 선택
 print(sampleDf)
 print(sampleDf.corr())
 print(sampleDf.groupby("Survived").mean())
@@ -64,10 +64,10 @@ print(mask)
 print([[mask]])
 # print(df.corr())
 # print(df.groupby("survived").mean())
-sampleDf2["New"]=0
-sampleDf2["Family"]=sampleDf2["SibSp"]+sampleDf2["Parch"]
-sampleDf2= sampleDf2.drop(labels="New",axis=1)
-sampleDf2.drop(columns=["Family"],inplace=True)
+sampleDf2["New"]=0 # 새로운 컬럼 추가
+sampleDf2["Family"]=sampleDf2["SibSp"]+sampleDf2["Parch"] # 가족 수 파생 변수 생성
+sampleDf2= sampleDf2.drop(labels="New",axis=1) # 컬럼 삭제 (방법 1)
+sampleDf2.drop(columns=["Family"],inplace=True) # 컬럼 삭제 (방법 2, inplace=True)
 print(sampleDf2)
 np.random.seed(0)
 data=np.random.randn(len(sampleDf2))
@@ -85,9 +85,9 @@ rdf = rdf.reset_index(drop=True)
 print(rdf)
 sampleDf2=sampleDf2.rename({"Age":"나이"},axis=1)
 print(sampleDf2)
-age_mean=sampleDf2.나이.mean()
+age_mean=sampleDf2.나이.mean() # 나이 평균 계산
 print(age_mean)
-sampleDf2["나이"]=sampleDf2["나이"].fillna(value=age_mean)
+sampleDf2["나이"]=sampleDf2["나이"].fillna(value=age_mean) # 결측치를 평균값으로 채움
 print(sampleDf2[888:])
 def f(x):
     """

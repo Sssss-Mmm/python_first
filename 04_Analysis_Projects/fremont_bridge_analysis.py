@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn
 # 1. [데이터 로드 및 전처리]
-data = pd.read_csv("FremontBridge.csv",index_col="Date",parse_dates=True)
+data = pd.read_csv("../data/FremontBridge.csv",index_col="Date",parse_dates=True)
 print(data.head(5))
 cols =['East',"West"]
 data.columns = cols

@@ -10,8 +10,8 @@ import datetime
 from pandas.tseries.holiday import USFederalHolidayCalendar
 from sklearn.metrics import r2_score, mean_squared_error
 
-counts= pd.read_csv('FremontBridge.csv',index_col='Date', parse_dates=True)
-weather =pd.read_csv('BicycleWeather.csv',index_col='DATE',parse_dates=True)
+counts= pd.read_csv('../data/FremontBridge.csv',index_col='Date', parse_dates=True)
+weather =pd.read_csv('../data/BicycleWeather.csv',index_col='DATE',parse_dates=True)
 print(counts.head(3))
 weather.info()
 print(weather.head(3))

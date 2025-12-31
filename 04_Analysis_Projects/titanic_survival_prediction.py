@@ -16,7 +16,7 @@ def main():
     # 예제 폴더 내의 train.csv를 사용합니다.
     print("[1] 데이터 로드 중...")
     try:
-        df = pd.read_csv('train.csv')
+        df = pd.read_csv('../data/train.csv')
     except FileNotFoundError:
         print("오류: 'train.csv' 파일을 찾을 수 없습니다. 현재 폴더에 파일이 있는지 확인해주세요.")
         return

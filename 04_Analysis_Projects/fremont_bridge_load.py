@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("C:/Users/user/Desktop/job/gitRepo/FremontBridge.csv",
+data = pd.read_csv("../data/FremontBridge.csv",
                     index_col='Date', parse_dates=True)
 print(data.head())
 cols = ["East", "West"]

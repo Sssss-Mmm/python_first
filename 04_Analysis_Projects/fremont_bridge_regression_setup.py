@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-counts = pd.read_csv("C:/Users/user/Desktop/job/gitRepo/FremontBridge.csv",
+counts = pd.read_csv("../data/FremontBridge.csv",
                     index_col='Date', parse_dates=True)
-weather = pd.read_csv("C:/Users/user/Desktop/job/gitRepo/BicycleWeather.csv",
+weather = pd.read_csv("../data/BicycleWeather.csv",
                     index_col='DATE', parse_dates=True)
 print(counts.head())
 weather.info()

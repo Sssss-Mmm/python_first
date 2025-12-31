@@ -33,7 +33,7 @@ for dformat in dir(pd):
     if dformat.startswith("read_"):
         print(dformat)
 
-df = pd.read_csv("C:/Users/user/Desktop/job/gitRepo/BicycleWeather.csv")
+df = pd.read_csv("../data/BicycleWeather.csv")
 print(df.head(2))
 print(df.tail(3))
 print(df.sample(5))
@@ -43,7 +43,7 @@ print(dataFrame2.isna())
 print(df.isna().sample(5))
 print(df.describe())
 # print(df.corr())
-df2 = pd.read_csv("C:/Users/user/Desktop/job/gitRepo/FremontBridge.csv")
+df2 = pd.read_csv("../data/FremontBridge.csv")
 print(df2.corr())
 
 isnaDataFrame2 = dataFrame2.isna()
@@ -52,7 +52,7 @@ print(dataFrame3.groupby("예산").mean())
 
 ################  train.csv  ####################
 
-df = pd.read_csv("C:/Users/user/Desktop/job/gitRepo/train.csv")
+df = pd.read_csv("../data/train.csv")
 print(df.sample(5))
 df.info()
 print(df.describe())

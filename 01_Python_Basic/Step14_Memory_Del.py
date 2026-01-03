@@ -19,7 +19,7 @@ resultList = fib2(1000)
 print(resultList)
 print("######################")
 
-import fibonacciModule as fib3
+import Step07_Module_Custom as fib3
 print(fib3.__name__)
 resultList[:] = []
 resultList = fib3.fibonacci(1000)
@@ -30,7 +30,7 @@ print(resultList)
 # import tensorflow
 # print(tensorflow.__name)
 
-from fibonacciModule import fibonacci as fib4
+from Step07_Module_Custom import fibonacci as fib4
 print(fib4(100))
 
 # dir(fibonacci)

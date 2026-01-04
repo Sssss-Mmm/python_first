@@ -32,7 +32,7 @@ def foo(name,**kwds):
 # foo(1,**{'name':2})
 
 l = [1,4,3,2]
-l.sort();
+l.sort()
 print(l)
 
 pairs =[(1,'1'),(2,'12'),(3,'3'),(4,'21')]

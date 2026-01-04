@@ -271,7 +271,7 @@ resultList = fib2(1000)
 print('resultList: ',resultList)
 print("-----------------------------")
 
-import Step07_Module_Custom as fib3
+import Step10_Module_Custom as fib3
 print(fib3.__name__)
 resultList[:] = []
 resultList = fib3.fibonacci(1000)
@@ -282,7 +282,7 @@ print(resultList)
 # import tensorflow
 # print(tensorflow.__name)
 
-from Step07_Module_Custom import fibonacci as fib4
+from Step10_Module_Custom import fibonacci as fib4
 print(fib4(100))
 # 'python.exe' 'launcher' '51071'(메모리주소) -- 20250411_01.py(파일명)
 # dir(fibonacci) #import

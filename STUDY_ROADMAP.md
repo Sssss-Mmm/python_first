@@ -10,20 +10,24 @@ Python의 기초 문법부터 필수 내장 모듈, 자료구조 활용을 다�
 | Step | 파일명 | 학습 내용 |
 | :-- | :--- | :--- |
 | **01** | [Step01_Hello.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step01_Hello.py) | Python 입문 및 출력 |
-| **02** | [Step02_Loop_Basic.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step02_Loop_Basic.py) | 반복문 기본 (소수 찾기) |
-| **03** | [Step03_Loop_Advanced.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step03_Loop_Advanced.py) | 반복문 심화 (구구단, 피보나치) |
-| **04** | [Step04_Function_Basic.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step04_Function_Basic.py) | 함수 정의와 호출 기초 |
-| **05** | [Step05_Function_Args.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step05_Function_Args.py) | 가변 인자(*args) 활용 |
-| **06** | [Step06_Module_Sys.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step06_Module_Sys.py) | sys 모듈 활용법 |
-| **07** | [Step07_Module_Custom.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step07_Module_Custom.py) | 사용자 정의 모듈 만들기 |
-| **08** | [Step08_Exception_Basic.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step08_Exception_Basic.py) | 예외 처리 try-except 기초 |
-| **09** | [Step09_Exception_Advanced.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step09_Exception_Advanced.py) | 사용자 정의 예외와 raise |
-| **10** | [Step10_FileIO_Basic.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step10_FileIO_Basic.py) | 파일 입출력 시 예외 처리 |
-| **11** | [Step11_FileIO_Advanced.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step11_FileIO_Advanced.py) | readline을 활용한 파일 읽기 |
-| **12** | [Step12_DataStruct_Stack.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step12_DataStruct_Stack.py) | 스택(Stack) 자료구조 구현 |
-| **13** | [Step13_DataStruct_TupleQueue.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step13_DataStruct_TupleQueue.py) | 튜플과 큐(Queue) 활용 |
-| **14** | [Step14_Memory_Del.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step14_Memory_Del.py) | 변수 메모리 해제(del) |
-| **15** | [Step15_Advanced_Features.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step15_Advanced_Features.py) | **[심화]** Decorator, Generator |
+| **02** | [Step02_Variables_Types.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step02_Variables_Types.py) | **[추가]** 변수와 자료형, 형변환 |
+| **03** | [Step03_String_Ops.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step03_String_Ops.py) | **[추가]** 문자열 조작과 포맷팅 |
+| **04** | [Step04_Loop_Basic.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step04_Loop_Basic.py) | 반복문 기본 (소수 찾기) |
+| **05** | [Step05_Loop_Advanced.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step05_Loop_Advanced.py) | 반복문 심화 (구구단, 피보나치) |
+| **06** | [Step06_Function_Basic.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step06_Function_Basic.py) | 함수 정의와 호출 기초 |
+| **07** | [Step07_Function_Args.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step07_Function_Args.py) | 가변 인자(*args) 활용 |
+| **08** | [Step08_List_Set_Dict_Methods.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step08_List_Set_Dict_Methods.py) | **[추가]** 리스트/셋/딕셔너리 심화 메소드 |
+| **09** | [Step09_Module_Sys.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step09_Module_Sys.py) | sys 모듈 활용법 |
+| **10** | [Step10_Module_Custom.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step10_Module_Custom.py) | 사용자 정의 모듈 만들기 |
+| **11** | [Step11_Exception_Basic.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step11_Exception_Basic.py) | 예외 처리 try-except 기초 |
+| **12** | [Step12_Exception_Advanced.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step12_Exception_Advanced.py) | 사용자 정의 예외와 raise |
+| **13** | [Step13_FileIO_Basic.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step13_FileIO_Basic.py) | 파일 입출력 시 예외 처리 |
+| **14** | [Step14_FileIO_Advanced.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step14_FileIO_Advanced.py) | readline을 활용한 파일 읽기 |
+| **15** | [Step15_Class_Basic.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step15_Class_Basic.py) | **[추가]** 클래스와 객체 지향 기초 |
+| **16** | [Step16_DataStruct_Stack.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step16_DataStruct_Stack.py) | 스택(Stack) 자료구조 구현 |
+| **17** | [Step17_DataStruct_TupleQueue.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step17_DataStruct_TupleQueue.py) | 튜플과 큐(Queue) 활용 (모듈 import) |
+| **18** | [Step18_Memory_Del.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step18_Memory_Del.py) | 변수 메모리 해제(del) (모듈 import) |
+| **19** | [Step19_Advanced_Features.py](file:///home/sssss_mmm/python_first/01_Python_Basic/Step19_Advanced_Features.py) | **[심화]** Decorator, Generator |
 
 ---
 

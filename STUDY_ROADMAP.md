@@ -82,3 +82,7 @@ Python의 기초 문법부터 필수 내장 모듈, 자료구조 활용을 다�
 | :-- | :--- | :--- |
 | **01** | [Step01_Logic_Simulation.py](file:///home/sssss_mmm/python_first/05_RPA/Step01_Logic_Simulation.py) | RPA 로직(데이터 집계) 시뮬레이션 |
 | **02** | [Step02_OS_Automation.py](file:///home/sssss_mmm/python_first/05_RPA/Step02_OS_Automation.py) | **[심화]** 파일 정리 및 백업 자동화 |
+| **03** | [Step03_Excel_Automation.py](file:///home/sssss_mmm/python_first/05_RPA/Step03_Excel_Automation.py) | **[추가]** Excel 자동화 (openpyxl) |
+| **04** | [Step04_Web_Automation_Selenium.py](file:///home/sssss_mmm/python_first/05_RPA/Step04_Web_Automation_Selenium.py) | **[추가]** Web 브라우저 자동화 (Selenium) |
+| **05** | [Step05_Mouse_Keyboard_Automation.py](file:///home/sssss_mmm/python_first/05_RPA/Step05_Mouse_Keyboard_Automation.py) | **[추가]** 마우스/키보드 제어 (PyAutoGUI) |
+| **06** | [Step06_Email_Automation.py](file:///home/sssss_mmm/python_first/05_RPA/Step06_Email_Automation.py) | **[추가]** 이메일 자동 발송 (smtplib) |

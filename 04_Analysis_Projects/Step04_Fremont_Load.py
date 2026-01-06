@@ -1,3 +1,14 @@
+"""
+[Step 04] Fremont Bridge Data Load & Analysis
+---------------------------------------------
+Fremont Bridge 자전거 통행량 데이터를 로드하고 
+시계열 데이터 처리(Resampling) 및 시각화를 수행하는 예제입니다.
+
+주요 내용:
+- CSV 데이터 로드 및 날짜 인덱스 설정
+- 주간(Weekly), 일간(Daily) 데이터 리샘플링
+- 시간대별, 요일별 통행량 패턴 분석 및 시각화
+"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt

@@ -1,3 +1,15 @@
+"""
+[Step 07] Fremont Regression Analysis
+-------------------------------------
+Fremont Bridge 자전거 통행량 데이터와 기상 데이터를 결합하여
+선형 회귀(Linear Regression) 모델을 구축하고 분석하는 예제입니다.
+
+주요 내용:
+- 데이터 로드 및 일별 리샘플링
+- 파생 변수 생성 (요일, 휴일, 일조시간 등)
+- 기상 데이터(강수량, 온도)와의 결합
+- 선형 회귀 모델 학습 및 예측 시각화
+"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt

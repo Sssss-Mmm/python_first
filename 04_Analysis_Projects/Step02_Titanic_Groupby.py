@@ -1,3 +1,15 @@
+"""
+[Step 02] Titanic GroupBy & DataFrame Practice
+----------------------------------------------
+Pandas DataFrame의 생성부터 GroupBy 집계, 결측치 처리, 
+그리고 apply/map을 이용한 데이터 변환 실습 예제입니다.
+
+주요 내용:
+- DataFrame 직접 생성 및 인덱싱
+- GroupBy를 이용한 그룹별 통계 확인
+- Titanic 데이터셋의 결측치 처리 및 파생 변수 생성
+- map, applymap, apply 등을 활용한 데이터 조작
+"""
 import numpy as np
 import pandas as pd
 data1 = np.zeros((4,2))

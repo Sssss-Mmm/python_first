@@ -1,3 +1,9 @@
+"""
+[Step 04] Matplotlib Visualization Basics
+-----------------------------------------
+Matplotlib을 이용한 다양한 그래프 시각화 및 한글 폰트 설정 예제입니다.
+Line, Scatter, Bar, Pie Chart 및 Subplot 사용법을 다룹니다.
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 

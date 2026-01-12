@@ -1,0 +1,2 @@
+Hello, Context Manager!
+This file allows automatic closing.

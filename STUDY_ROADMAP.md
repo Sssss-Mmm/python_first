@@ -44,11 +44,15 @@ Python의 기초 문법부터 필수 내장 모듈, 자료구조 활용을 다�
 
 | Step | 파일명 | 학습 내용 |
 | :-- | :--- | :--- |
-| **01** | [Step01_Array_Creation.py](file:///home/sssss_mmm/python_first/02_NumPy/Step01_Array_Creation.py) | 배열 생성 기초 |
-| **02** | [Step02_Array_Operations.py](file:///home/sssss_mmm/python_first/02_NumPy/Step02_Array_Operations.py) | 배열 연산과 함수 |
-| **03** | [Step03_Performance_Test.py](file:///home/sssss_mmm/python_first/02_NumPy/Step03_Performance_Test.py) | Python List vs NumPy 성능 비교 |
-| **04** | [Step04_Usage_Examples.py](file:///home/sssss_mmm/python_first/02_NumPy/Step04_Usage_Examples.py) | 실질적인 NumPy 활용 예시 |
-| **05** | [Step05_Advanced_Features.py](file:///home/sssss_mmm/python_first/02_NumPy/Step05_Advanced_Features.py) | **[심화]** Broadcasting, Masking |
+| **01** | [Step01_Creation_Attributes.py](file:///home/sssss_mmm/python_first/02_NumPy/Step01_Creation_Attributes.py) | **[NEW]** 배열 생성 및 속성(shape, dtype) |
+| **02** | [Step02_DataTypes.py](file:///home/sssss_mmm/python_first/02_NumPy/Step02_DataTypes.py) | **[NEW]** 자료형 이해와 형변환(astype) |
+| **03** | [Step03_Indexing_Slicing.py](file:///home/sssss_mmm/python_first/02_NumPy/Step03_Indexing_Slicing.py) | **[NEW]** 인덱싱, 슬라이싱, Boolean Indexing |
+| **04** | [Step04_Shape_Manipulation.py](file:///home/sssss_mmm/python_first/02_NumPy/Step04_Shape_Manipulation.py) | **[NEW]** Reshape, Flatten, Transpose |
+| **05** | [Step05_Arithmetic_UFuncs.py](file:///home/sssss_mmm/python_first/02_NumPy/Step05_Arithmetic_UFuncs.py) | **[NEW]** 덧셈, 뺄셈 및 유니버설 함수(sqrt, sum) |
+| **06** | [Step06_Broadcasting.py](file:///home/sssss_mmm/python_first/02_NumPy/Step06_Broadcasting.py) | **[NEW]** 브로드캐스팅 규칙 이해 |
+| **07** | [Step07_Aggregation.py](file:///home/sssss_mmm/python_first/02_NumPy/Step07_Aggregation.py) | **[NEW]** 집계 함수(sum, mean, argmax) |
+| **08** | [Step08_LinearAlgebra.py](file:///home/sssss_mmm/python_first/02_NumPy/Step08_LinearAlgebra.py) | **[NEW]** 행렬 곱(dot), 역행렬 |
+| **09** | [Step09_Random_Module.py](file:///home/sssss_mmm/python_first/02_NumPy/Step09_Random_Module.py) | **[NEW]** 난수 생성(rand, randint) 및 시드 설정 |
 
 ---
 

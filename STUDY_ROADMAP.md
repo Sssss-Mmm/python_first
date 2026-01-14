@@ -61,12 +61,16 @@ Python의 기초 문법부터 필수 내장 모듈, 자료구조 활용을 다�
 
 | Step | 파일명 | 학습 내용 |
 | :-- | :--- | :--- |
-| **01** | [Step01_Version_Check.py](file:///home/sssss_mmm/python_first/03_Pandas/Step01_Version_Check.py) | Pandas 버전 확인 |
-| **02** | [Step02_Series_DataFrame.py](file:///home/sssss_mmm/python_first/03_Pandas/Step02_Series_DataFrame.py) | Series와 DataFrame 구조 이해 |
-| **03** | [Step03_Indexing_Slicing.py](file:///home/sssss_mmm/python_first/03_Pandas/Step03_Indexing_Slicing.py) | 데이터 인덱싱과 슬라이싱 |
-| **04** | [Step04_Data_Selection.py](file:///home/sssss_mmm/python_first/03_Pandas/Step04_Data_Selection.py) | loc, iloc을 이용한 데이터 선택 |
-| **05** | [Step05_Basic_Operations.py](file:///home/sssss_mmm/python_first/03_Pandas/Step05_Basic_Operations.py) | 기본 연산 (평균, 합계 등) |
-| **06** | [Step06_Advanced_Manipulation.py](file:///home/sssss_mmm/python_first/03_Pandas/Step06_Advanced_Manipulation.py) | **[심화]** Merge, Apply, 결측치 |
+| **01** | [Step01_Series_DataFrame.py](file:///home/sssss_mmm/python_first/03_Pandas/Step01_Series_DataFrame.py) | **[NEW]** Series와 DataFrame 기본 구조 |
+| **02** | [Step02_Files_IO_Basic.py](file:///home/sssss_mmm/python_first/03_Pandas/Step02_Files_IO_Basic.py) | **[NEW]** CSV, JSON 파일 입출력 |
+| **03** | [Step03_Indexing_Selection_Loc.py](file:///home/sssss_mmm/python_first/03_Pandas/Step03_Indexing_Selection_Loc.py) | **[NEW]** loc, iloc 인덱싱 및 필터링 |
+| **04** | [Step04_Data_Manipulation.py](file:///home/sssss_mmm/python_first/03_Pandas/Step04_Data_Manipulation.py) | **[NEW]** 컬럼 추가/삭제 및 정렬 |
+| **05** | [Step05_Missing_Data.py](file:///home/sssss_mmm/python_first/03_Pandas/Step05_Missing_Data.py) | **[NEW]** 결측치(NaN) 확인 및 처리 |
+| **06** | [Step06_Operations_Stats.py](file:///home/sssss_mmm/python_first/03_Pandas/Step06_Operations_Stats.py) | **[NEW]** 통계 연산(`describe`)과 함수 적용(`apply`) |
+| **07** | [Step07_GroupBy_Aggregation.py](file:///home/sssss_mmm/python_first/03_Pandas/Step07_GroupBy_Aggregation.py) | **[NEW]** 그룹화(`groupby`) 및 집계 |
+| **08** | [Step08_Merge_Concat.py](file:///home/sssss_mmm/python_first/03_Pandas/Step08_Merge_Concat.py) | **[NEW]** 데이터 병합(`merge`, `concat`) |
+| **09** | [Step09_Pivot_Crosstab.py](file:///home/sssss_mmm/python_first/03_Pandas/Step09_Pivot_Crosstab.py) | **[NEW]** 피벗 테이블과 교차표 |
+| **10** | [Step10_TimeSeries_Basic.py](file:///home/sssss_mmm/python_first/03_Pandas/Step10_TimeSeries_Basic.py) | **[NEW]** 시계열 데이터 기초 및 리샘플링 |
 
 ---
 

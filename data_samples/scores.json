@@ -1,0 +1,22 @@
+[
+    {
+        "Name":"Kim",
+        "Score":85,
+        "Grade":"B"
+    },
+    {
+        "Name":"Lee",
+        "Score":90,
+        "Grade":"A"
+    },
+    {
+        "Name":"Park",
+        "Score":78,
+        "Grade":"C"
+    },
+    {
+        "Name":"Choi",
+        "Score":92,
+        "Grade":"A"
+    }
+]

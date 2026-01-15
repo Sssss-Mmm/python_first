@@ -79,15 +79,15 @@ Python의 기초 문법부터 필수 내장 모듈, 자료구조 활용을 다�
 
 | Step | 파일명 | 주제 |
 | :-- | :--- | :--- |
-| **01** | [Step01_Titanic_Analysis.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step01_Titanic_Analysis.py) | 타이타닉 생존자 데이터 분석 |
-| **02** | [Step02_Titanic_Groupby.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step02_Titanic_Groupby.py) | 그룹별 생존율 통계 분석 |
-| **03** | [Step03_Titanic_Prediction.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step03_Titanic_Prediction.py) | 생존자 예측 머신러닝 모델링 |
-| **--** | **Fremont 자전거 통행량 분석** | (시계열 데이터 프로젝트) |
-| **04** | [Step04_Fremont_Load.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step04_Fremont_Load.py) | 데이터 로드 및 전처리 |
-| **05** | [Step05_Fremont_Analysis.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step05_Fremont_Analysis.py) | 통행량 패턴 시각화 및 분석 |
-| **06** | [Step06_Fremont_Prediction.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step06_Fremont_Prediction.py) | 통행량 예측 (Ridge/Lasso) |
-| **07** | [Step07_Fremont_Regression.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step07_Fremont_Regression.py) | 선형 회귀 모델 셋업 |
-| **08** | [Step08_Model_Optimization.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step08_Model_Optimization.py) | **[심화]** 모델 파이프라인 및 최적화 |
+| **--** | **Project 1: Titanic Survival** | **분류 (Classification)** |
+| **01** | [Step01_Titanic_EDA.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step01_Titanic_EDA.py) | 데이터 탐색 및 시각화 (EDA) |
+| **02** | [Step02_Titanic_Preprocessing.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step02_Titanic_Preprocessing.py) | 결측치 처리 및 인코딩 |
+| **03** | [Step03_Titanic_Modeling.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step03_Titanic_Modeling.py) | 모델 학습(Logistic) 및 평가 |
+| **--** | **Project 2: Fremont Bridge** | **시계열 회귀 (Time Series)** |
+| **04** | [Step04_Fremont_DataLoad.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step04_Fremont_DataLoad.py) | 데이터 다운로드 및 로드 |
+| **05** | [Step05_Fremont_Visualization.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step05_Fremont_Visualization.py) | 이동 평균 및 시간대별 시각화 |
+| **06** | [Step06_Fremont_Analysis.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step06_Fremont_Analysis.py) | 주중 vs 주말 패턴 분석 |
+| **07** | [Step07_Fremont_Prediction.py](file:///home/sssss_mmm/python_first/04_Analysis_Projects/Step07_Fremont_Prediction.py) | 선형 회귀를 이용한 통행량 예측 |
 
 ---
 
